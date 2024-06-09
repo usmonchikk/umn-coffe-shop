@@ -3,6 +3,12 @@
 :root{
   --text-color:#333;
   --accent-color-green:#0a775f;
+  --accent-color-green-80:rgba(10,119,95,0.8);
+  --accent-color-green-60:rgba(10,119,95,0.6);
+  --accent-color-light-brown:#c99b67;
+  --accent-color-light-brown-80:rgb(201,155,103,0.8);
+  --accent-color-light-brown-60:rgb(201,155,103,0.6);
+  --light-brown:#f3d7b7;
   --outline-color:var(--accent-color-green);
 }
 
@@ -104,6 +110,50 @@ img{
   margin-right: auto;
 }
 
+/* BUtton */
+
+.button{
+display: inline-block;
+padding: 16px 24px;
+border: 0;
+border-radius:100px;
+font-size: 16px;
+line-height: normal;
+font-weight: 500;
+cursor: pointer;
+text-decoration: none;
+text-transform: uppercase;
+letter-spacing: 1px;
+white-space: nowrap;
+}
+
+.button-green{
+background-color: var(--accent-color-green);
+color:#fff;
+}
+
+.button-green:hover{
+  background-color:var(--accent-color-green-80);
+}
+
+.button-green:active{
+  background-color:var(--accent-color-green-60);
+}
+
+.button-brown{
+  background-color: var(--accent-color-light-brown);
+  color:#fff;
+  }
+
+  .button-brown:hover{
+    background-color:var(--accent-color-light-brown-80);
+  }
+
+  .button-brown:active{
+    background-color:var(--accent-color-light-brown-60);
+  }
+
+
 /* MAinContent */
 .main-content{
  flex-grow: 1;
@@ -111,6 +161,7 @@ img{
 
 /* Site-Header-intro-wrapper */
 .site-header-hero-wrapper{
+  background-color:var(--light-brown);
   background-image: url("../img/SIte-header-bg.jpg");
 }
 
@@ -178,6 +229,67 @@ opacity: 0.8;
 .sitenav-link:active{
   opacity: 0.6;
 }
+
+
+/* HEro */
+.hero{
+
+}
+
+.hero-container{
+display: flex;
+
+padding-left: 0;
+padding-right: 0;
+
+}
+
+.hero-info-wrapper{
+width: 100%;
+max-width: 730px;
+padding-top: 116px;
+padding-bottom: 100px;
+padding-left: 150px;
+padding-right: 116px;
+}
+
+.hero-heading{
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 64px;
+  line-height:normal;
+  color:#000;
+}
+
+.hero-text{
+  margin:0;
+  font-size: 16px;
+  line-height: 1.5;
+
+}
+
+.hero-text:not(:last-child){
+  margin-bottom: 34px;
+}
+
+
+.hero-img{
+  border-radius: 18px;
+  width: 710;
+  height: 596;
+object-fit: cover;
+}
+
+.hero-img-index{
+height: 696;
+}
+
+
+
+
+
+
+
 
 
 /* REtina bg */
