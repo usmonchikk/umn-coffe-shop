@@ -2,6 +2,8 @@
 
 :root{
   --text-color:#333;
+  --accent-color-green:#0a775f;
+  --outline-color:var(--accent-color-green);
 }
 
 
@@ -86,11 +88,18 @@ img{
   max-width: 100%;
   height: auto;
 }
+
+*:focus{
+  outline:2px dashed var(--outline-color);
+  outline-offset: 3px;
+}
+
+
 .container{
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1440px;
+  padding-left: 20px;
+  padding-right:20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -98,4 +107,91 @@ img{
 /* MAinContent */
 .main-content{
  flex-grow: 1;
+}
+
+/* Site-Header-intro-wrapper */
+.site-header-hero-wrapper{
+  background-image: url("../img/SIte-header-bg.jpg");
+}
+
+/* Site Header */
+.site-header{
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+}
+
+.site-header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.site-header-logo-link{
+  display: flex;
+  text-decoration: none;
+
+}
+
+.site-header-logo-link.hover{
+opacity: 0.8;
+}
+
+.site-header-logo-link.active{
+  opacity: 0.6;
+}
+
+.site-header-logo-img{
+  width: 235px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Sitenav */
+.sitenav-list{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sitenav-item:not(:last-child){
+  margin-right: 40px;
+}
+
+.sitenav-link{
+  display: block;
+  font-size: 12px;
+  line-height: normal;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color:var(--text-color);
+}
+
+.sitenav-link:hover{
+  color:var(--accent-color-green);
+}
+
+.sitenav-link:active{
+  opacity: 0.6;
+}
+
+
+/* REtina bg */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+  .site-header-hero-wrapper{
+    background-image: url("../img/SIte-header-bg@2x.jpg");
+  }
+  /* Retina-specific stuff here */
+
 }
